@@ -98,6 +98,10 @@ class App:
         self.table.heading("Kegiatan", text="Kegiatan", anchor=W)
     
         self.table.pack(pady=100)
+        
+        vsb = ttk.Scrollbar(self.alarm_app, orient="vertical", command=self.table.yview)
+        vsb.place(x=305, y=100, height=150)
+        
         App.update_table(self)
         
     def button_listener(self):
